@@ -1,0 +1,10 @@
+.container{
+    display: grid;
+    place-content: center;
+    height: 90vh;
+}
+.err{
+    text-align: center;
+    margin-block: 10px;
+
+}
