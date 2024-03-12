@@ -1,12 +1,10 @@
 import '../styles/PricingPage.css'
 import product from '../assets/product-images/istockphoto-520619396-612x612.jpg'
 
-import NavBar from './NavBar'
 
 function PricingPage(){
     return (
         <>
-            <NavBar />
             <div className="root">
                 <div className="holder">
                     <div className="img">

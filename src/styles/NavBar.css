@@ -1,5 +1,5 @@
 .nav-bar{
-    background-color: rgb(78, 26, 126);
+    background-color: var(--primary-bg);
     /* padding: 15px 15px 0px 15px; */
     padding-left: 15px;
     width: calc(100% - 15px);
@@ -55,7 +55,7 @@
 
 .nav{
     font-weight: 500;
-    color: #646cff;
+    color: var(--bold-text);
     text-decoration: inherit;
     height: 50px;
     transition: 0.5s ease;
