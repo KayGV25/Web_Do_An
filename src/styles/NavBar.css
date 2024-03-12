@@ -1,5 +1,5 @@
 .nav-bar{
-    background-color: var(--primary-bg);
+    background-color: var(--color1);
     /* padding: 15px 15px 0px 15px; */
     padding-left: 15px;
     width: calc(100% - 15px);
@@ -20,45 +20,24 @@
 }
 .logo{
     width: 50px;
-    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .circle{
     width: 15px;
     height: 15px;
     border-radius: 50%;
     background-color: aliceblue;
-    filter: blur(10px) contrast(20px);
     display: inline-block;
-}
-.lr{
-    position: absolute;
-    left: 0;
-    top: 20px;
-    animation: lr 2s linear infinite;
-}
-@keyframes lr {
-    50%{
-        left: 30px;
-        right: 0;
-    }
-    100%{
-        right: 40px;
-        left: 0;
-    }
-}
-.rl{
-    position: absolute;
-    right: 20px;
-    top: 20px;
-    animation: rl 3s linear infinite;
 }
 
 .nav{
     font-weight: 500;
-    color: var(--bold-text);
+    color: white;
     text-decoration: inherit;
     height: 50px;
-    transition: 0.5s ease;
+    transition: 0.25s ease;
     padding-top: 10px;
     padding-inline: 5px;
 }
