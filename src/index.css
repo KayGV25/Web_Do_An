@@ -18,7 +18,7 @@
   */
   --primary-bg: #03045E;
   --secondary-bg: #0077B6;
-  --other-bg: #00B4D8;
+  --other-bg: #90E0EF;
   --bold-text: #00B4D8;
   --normal-text: #CAF0F8;
 }
@@ -50,7 +50,7 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: var(--other-bg);
+  background-color: var(--bold-text);
   cursor: pointer;
   transition: border-color 0.25s;
 }

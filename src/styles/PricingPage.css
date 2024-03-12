@@ -38,7 +38,7 @@ img{
     font-weight: bold;
 }
 .price > *{
-    color: var(--bold-text);
+    color: var(--other-bg);
     font-weight: bold;
     font-size: 1.5em;
     margin: 0;
