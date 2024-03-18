@@ -1,5 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
+import 'bootstrap/dist/css/bootstrap.min.css';
 import {
   createBrowserRouter,
   RouterProvider,
@@ -12,7 +13,6 @@ import './index.css'
 import HomePage from './pages/HomePage';
 import ErrPage from './pages/ErrPage';
 import SupportPage from './pages/SupportPage';
-import PricingPage from './pages/PricingPage';
 
 // Add routing to different pages
 const router = createBrowserRouter([
@@ -24,11 +24,6 @@ const router = createBrowserRouter([
   {
     path: "Support",
     element: <SupportPage />
-  },
-  {
-    path: "/Pricing",
-    element: <PricingPage />,
-    errorElement: <ErrPage />,
   },
 ]);
 
