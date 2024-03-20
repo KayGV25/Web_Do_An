@@ -1,5 +1,3 @@
-import '../styles/HomePage.css'
-
 import NavBar from '../assets/components/NavBar';
 import PricingPage from '../assets/components/PricingPage'
 import About from '../assets/components/About';
