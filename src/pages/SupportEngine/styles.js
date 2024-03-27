@@ -10,8 +10,8 @@ export const styles = {
         backgroundPosition: 'center',
         backgroundSize: '84px',
         //Size
-        width: '70px',
-        height: '70px',
+        width: '50px',
+        height: '50px',
         
     },
     avatarHello: {

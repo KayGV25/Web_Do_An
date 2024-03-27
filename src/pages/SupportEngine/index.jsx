@@ -25,9 +25,9 @@ const SupportEngine = () => {
             />
             
             <Avatar 
-                onClick={() => setVisible(true)}
+                onClick={() => setVisible(!visible)}
                 style={{ 
-                    position: 'fixed', bottom: '100px', right: '50px'                    
+                    position: 'fixed', bottom: '100px', right: '35px'                    
                 }}
             />
         </div>

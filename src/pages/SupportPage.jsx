@@ -1,5 +1,5 @@
 import { Accordion, Placeholder } from "react-bootstrap";
-import SupportEngine from '../SupportEngine';
+import SupportEngine from './SupportEngine/index'
 import NavBar from "../assets/components/NavBar";
 
 function SupportPage() {
