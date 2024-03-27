@@ -1,5 +1,5 @@
 import { Accordion, Placeholder } from "react-bootstrap";
-import ChatWidget from "../assets/components/ChatWidget";
+import SupportEngine from '../SupportEngine';
 import NavBar from "../assets/components/NavBar";
 
 function SupportPage() {
@@ -33,7 +33,10 @@ function SupportPage() {
             </Accordion.Body>
           </Accordion.Item>
         </Accordion>
-        <ChatWidget />
+        <div>
+          <SupportEngine />
+        </div>
+        
     </>
   );
 }

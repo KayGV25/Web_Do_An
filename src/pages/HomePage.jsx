@@ -5,7 +5,8 @@ import Offer from '../assets/components/Offer';
 import LandImg from '../assets/components/LandImg';
 import Footer from '../assets/components/Footer';
 import ScrollToTop from "react-scroll-to-top";
-import ChatWidget from '../assets/components/ChatWidget';
+import SupportEngine from '../SupportEngine/index';
+import SupportWindow from '../SupportEngine/SupportWindow/index';
 
 function HomePage(){
     return (
@@ -18,7 +19,10 @@ function HomePage(){
             <div className="float">
                 <ScrollToTop className='back-to-top' smooth />
             </div>
-            <ChatWidget />
+            <div>
+                <SupportEngine/>
+            </div>
+            <SupportWindow />
             <Footer />
         </>
     )
