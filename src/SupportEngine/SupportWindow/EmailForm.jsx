@@ -74,7 +74,7 @@ const EmailForm = props => {
             >
 
             </div>
-            <LoadingOutlined 
+            {/* <LoadingOutlined 
                 className="transition-5"
                 style={{
                     zIndex: Loading ? '10' : '-1',
@@ -82,7 +82,7 @@ const EmailForm = props => {
                     fontSize: '82px',
                     ...styles.loadingIcon
                 }}
-            />
+            /> */}
             <div style={{ position: 'absolute', height: '100%', width: '100%', textAlign: 'center' }}>
                 <Avatar
                     style={{
@@ -99,11 +99,18 @@ const EmailForm = props => {
                     onSubmit={e => handleSubmit(e)}
                     style={{ position: 'relative', width: '100%', top: '20%' }}
                 >
-                    <input
+                    {/* <input
                         style={styles.emailInput}
                         onChange={e => setEmail(e.target.value)}
                         placeholder='Email may la j'
-                    />    
+                    /> */}
+                    <input
+                    type="email"
+                    style={styles.emailInput}
+                    onChange={e => { console.log('Email:', e.target.value); setEmail(e.target.value); }}
+                    placeholder='Email may la j'
+                    value={email}
+                    />
                 </form>
                 <div style={styles.bottomText}>
                     nhap mail vao de <br/> bat dau di cu
