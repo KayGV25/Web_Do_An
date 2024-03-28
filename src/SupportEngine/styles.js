@@ -104,8 +104,8 @@ export const styles = {
     loadingIcon: {
         color: 'var(--color1)',
         position: 'absolute',
-        top: 'calc(50% - 30px)',
-        left: '40%',
+        // top: 'calc(50% - 30px)',
+        // left: '40%',
         fontWeight: '600',
     },
     chatEngineWindow: {

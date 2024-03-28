@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { styles } from '../styles.js';
 import { LoadingOutlined } from '@ant-design/icons';
 import Avatar from "../Avatar.jsx";
-import axois from 'axios';
+import axios from 'axios';
 
 const EmailForm = props => {
     const [email, setEmail] = useState('')
@@ -52,15 +52,9 @@ const EmailForm = props => {
     }
 
     return (
-        <div style={{
-            ...styles.emailFormWindow,
-            ...{
-                height: '100%',
-                opacity: '1',
-            }
-        }}>
+        <div >
             <div style={{ height:'0px'}}>
-                <div style={styles.stripe}></div>
+                <div style={styles.stripe}/>
             </div>
                     
             <div className="transition-5"
@@ -71,18 +65,19 @@ const EmailForm = props => {
 
                 }}
             
-            >
+            />
 
-            </div>
-            {/* <LoadingOutlined 
+            <LoadingOutlined 
                 className="transition-5"
                 style={{
                     zIndex: Loading ? '10' : '-1',
                     opacity: Loading ? '0.33' : '0', 
                     fontSize: '82px',
+                    top: 'calc(50% - 41px)',
+                    left: 'calc(50% - 41px)',
                     ...styles.loadingIcon
                 }}
-            /> */}
+            />
             <div style={{ position: 'absolute', height: '100%', width: '100%', textAlign: 'center' }}>
                 <Avatar
                     style={{
@@ -99,11 +94,7 @@ const EmailForm = props => {
                     onSubmit={e => handleSubmit(e)}
                     style={{ position: 'relative', width: '100%', top: '20%' }}
                 >
-                    {/* <input
-                        style={styles.emailInput}
-                        onChange={e => setEmail(e.target.value)}
-                        placeholder='Email may la j'
-                    /> */}
+
                     <input
                     type="email"
                     style={styles.emailInput}
@@ -118,5 +109,7 @@ const EmailForm = props => {
             </div>
         </div>
     )
+
+    
 }
 export default EmailForm
