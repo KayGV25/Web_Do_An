@@ -3,6 +3,7 @@ import { styles } from '../styles.js';
 import { LoadingOutlined } from '@ant-design/icons';
 import Avatar from "../Avatar.jsx";
 import axios from 'axios';
+import {REACT_APP_CE_PRIVATE_KEY, REACT_APP_CE_PROJECT_ID} from "../../apiKey.js"
 
 const EmailForm = props => {
     const [email, setEmail] = useState('')
@@ -16,7 +17,8 @@ const EmailForm = props => {
                 "secret": email,
                 "email": email,
             },
-            {headers: {"Private-Key": process.env.REACT_APP_CE_PRIVATE_KEY}}
+            // {headers: {"Private-Key": process.env.REACT_APP_CE_PRIVATE_KEY}}
+            {headers: {"Private-Key": REACT_APP_CE_PRIVATE_KEY}}
         )
         .then(r => callback(r.data))
     }
@@ -29,7 +31,8 @@ const EmailForm = props => {
                     "is_direct_chat": true,
                 
             },
-            {headers: {"Private-Key": process.env.REACT_APP_CE_PRIVATE_KEY}}
+            // {headers: {"Private-Key": process.env.REACT_APP_CE_PRIVATE_KEY}}
+            {headers: {"Private-Key": REACT_APP_CE_PRIVATE_KEY}}
         )
         .then(r => callback(r.data))
         
