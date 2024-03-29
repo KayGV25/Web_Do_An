@@ -21,6 +21,7 @@ const EmailForm = props => {
             {headers: {"Private-Key": REACT_APP_CE_PRIVATE_KEY}}
         )
         .then(r => callback(r.data))
+        .catch(e => console.log('Get or create user error', e))
     }
 
     function getOrCreateChat(callback) {
@@ -35,6 +36,7 @@ const EmailForm = props => {
             {headers: {"Private-Key": REACT_APP_CE_PRIVATE_KEY}}
         )
         .then(r => callback(r.data))
+        .catch(e => console.log('Get or create chat error', e))
         
     }
 
@@ -46,8 +48,9 @@ const EmailForm = props => {
 
         getOrCreateUser(
             user => {
+                    props.setUser(user)
                 getOrCreateChat(
-                    chat => console.log('success', chat)
+                    props.setChat(chat)
                 )
             }
         )
@@ -55,14 +58,23 @@ const EmailForm = props => {
     }
 
     return (
-        <div >
+        <div 
+        syles={{
+            height: '100%',
+            opacity: '1',
+            height: props.visible ? '100%' : '0px',
+            opacity: props.visible ? '1' : '0',
+            visibility: props.visible ? 'visibile' : 'hidden',
+            ...styles.emailFormWindow,
+        }}          
+        >
             <div style={{ height:'0px'}}>
                 <div style={styles.stripe}/>
             </div>
                     
             <div className="transition-5"
                 style={{
-                    zIndex: Loading ? '10' : '-1',
+                    zIndex: Loading ? '2' : '-1',
                     opacity: Loading ? '0.33' : '0',
                     ...styles.loadingDiv                   
 

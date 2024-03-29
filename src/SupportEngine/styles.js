@@ -18,11 +18,11 @@ export const styles = {
         //Position
         position: 'absolute',
         right: '75px',
-        top: '3px',
+        top: '3.5px',
         width: '150px',
         height: '40px',
         //Layering
-        zIndex: '10000',
+        zIndex: '-1',
         boxShadow: '0px 0px 16px 16px rgba(0, 0, 0, 0.33)',
         //Border
         padding: '8px 12px 12px 12px',
@@ -56,11 +56,13 @@ export const styles = {
         
     },
     emailFormWindow: {
+        backgroundColor: 'var(--color1)',
         width: '100%',
         overflow: 'hidden',
         transition: "all 0.5s ease",
         WebkitTransition: "all 0.5s ease",
         MozTransition: "all 0.5s ease",
+        
     },
     stripe: {
         position: 'relative',
