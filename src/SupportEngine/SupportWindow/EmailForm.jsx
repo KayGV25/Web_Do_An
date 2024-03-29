@@ -60,8 +60,6 @@ const EmailForm = props => {
     return (
         <div 
         syles={{
-            height: '100%',
-            opacity: '1',
             height: props.visible ? '100%' : '0px',
             opacity: props.visible ? '1' : '0',
             visibility: props.visible ? 'visibile' : 'hidden',
