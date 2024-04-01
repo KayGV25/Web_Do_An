@@ -56,7 +56,7 @@ export const styles = {
         
     },
     emailFormWindow: {
-        backgroundColor: 'var(--color1)',
+        backgroundColor: 'white',
         width: '100%',
         overflow: 'hidden',
         transition: "all 0.5s ease",

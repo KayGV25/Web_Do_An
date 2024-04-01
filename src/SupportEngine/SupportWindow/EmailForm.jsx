@@ -48,9 +48,9 @@ const EmailForm = props => {
 
         getOrCreateUser(
             user => {
-                    props.setUser(user)
+                props.setUser(user)
                 getOrCreateChat(
-                    props.setChat(chat)
+                    chat => props.setChat(chat)
                 )
             }
         )
@@ -59,7 +59,7 @@ const EmailForm = props => {
 
     return (
         <div 
-        syles={{
+        style={{
             height: '100%',
             opacity: '1',
             height: props.visible ? '100%' : '0px',

@@ -20,11 +20,11 @@ const SupportWindow = props => {
             setChat={chat => setChat(chat)}
             visible={user === null || chat === null}
         />
-        {/* <ChatEngine 
+        <ChatEngine 
             visible={user !== null && chat !== null}
             chat={chat}
             user={user}
-        /> */}
+        />
         </div>
     )
 
