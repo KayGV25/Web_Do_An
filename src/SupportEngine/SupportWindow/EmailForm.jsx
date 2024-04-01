@@ -59,7 +59,7 @@ const EmailForm = props => {
 
     return (
         <div 
-        syles={{
+        style={{
             height: '100%',
             opacity: '1',
             height: props.visible ? '100%' : '0px',
