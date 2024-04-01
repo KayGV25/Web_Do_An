@@ -13,7 +13,7 @@ const ChatEngine = props => {
             }}
         >
             {
-                props.visible && 
+                // props.visible && 
                 <chatEngineWrapper>
                     <Socket 
                         projectID={REACT_APP_CE_PROJECT_ID}
