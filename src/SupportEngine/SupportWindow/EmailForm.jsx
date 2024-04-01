@@ -20,6 +20,7 @@ const EmailForm = props => {
             // {headers: {"Private-Key": process.env.REACT_APP_CE_PRIVATE_KEY}}
             {headers: {"Private-Key": REACT_APP_CE_PRIVATE_KEY}}
         )
+        /*.then(r => console.log(r.data))*/
         .then(r => callback(r.data))
         .catch(e => console.log('Get or create user error', e))
     }
@@ -35,6 +36,7 @@ const EmailForm = props => {
             // {headers: {"Private-Key": process.env.REACT_APP_CE_PRIVATE_KEY}}
             {headers: {"Private-Key": REACT_APP_CE_PRIVATE_KEY}}
         )
+        /*.then(r => console.log(r.data))*/
         .then(r => callback(r.data))
         .catch(e => console.log('Get or create chat error', e))
         
@@ -48,9 +50,13 @@ const EmailForm = props => {
 
         getOrCreateUser(
             user => {
+                    console.log(user)
                     props.setUser(user)
-                getOrCreateChat(
-                    props.setChat(chat)
+                    getOrCreateChat(
+                        chat => {
+                            console.log(chat)
+                            props.setChat(chat)
+                        }
                 )
             }
         )
@@ -59,10 +65,10 @@ const EmailForm = props => {
 
     return (
         <div 
-        syles={{
+        style={{
             height: props.visible ? '100%' : '0px',
             opacity: props.visible ? '1' : '0',
-            visibility: props.visible ? 'visibile' : 'hidden',
+            //visibility: props.visible ? 'visibile' : 'hidden',
             ...styles.emailFormWindow,
         }}          
         >
@@ -111,7 +117,7 @@ const EmailForm = props => {
                     <input
                     type="email"
                     style={styles.emailInput}
-                    onChange={e => { console.log('Email:', e.target.value); setEmail(e.target.value); }}
+                    onChange={e => setEmail(e.target.value)}
                     placeholder='Email may la j'
                     value={email}
                     />

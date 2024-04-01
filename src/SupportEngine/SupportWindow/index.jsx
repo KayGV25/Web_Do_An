@@ -16,16 +16,16 @@ const SupportWindow = props => {
             visibility: props.visible ? 'visible' : 'hidden',
             ...styles.supportWindow
             }}>
-        <EmailForm 
-            setUser={user => setUser(user)}
-            setChat={chat => setChat(chat)}
-            visible={user === null || chat === null}
-        />
-        {/* <ChatEngine 
-            visible={user !== null && chat !== null}
-            chat={chat}
-            user={user}
-        /> */}
+            <EmailForm 
+                setUser={user => setUser(user)}
+                setChat={chat => setChat(chat)}
+                visible={user !== null || chat !== null}
+            />
+            {/* <ChatEngine 
+                visible={user !== null && chat !== null}
+                chat={chat}
+                user={user}
+            /> */}
         </div>
     )
 

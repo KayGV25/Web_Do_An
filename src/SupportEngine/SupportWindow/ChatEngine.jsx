@@ -7,13 +7,14 @@ const ChatEngine = props => {
     return (
         <div
             style={{
+                zIndex: props.visible ? '100%' : '0%',
                 height: props.visible ? '100%' : '0%',
-                opacity: props.visible ? '100' : '0',
+                // opacity: props.visible ? '100' : '0',
                 ...styles.chatEngineWindow,
             }}
         >
             {
-                // props.visible && 
+                props.visible && 
                 <chatEngineWrapper>
                     <Socket 
                         projectID={REACT_APP_CE_PROJECT_ID}
