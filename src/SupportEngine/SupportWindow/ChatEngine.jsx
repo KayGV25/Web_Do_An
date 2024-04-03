@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { chatEngineWrapper, Socket, ChatFeed } from 'react-chat-engine'
+import { ChatEngineWrapper, Socket, ChatFeed } from 'react-chat-engine'
 import { styles } from '../styles.js';
-import {REACT_APP_CE_PRIVATE_KEY, REACT_APP_CE_PROJECT_ID} from "../../apiKey.js"
+import {REACT_APP_CE_PROJECT_ID} from "../../apiKey.js"
 
 const ChatEngine = props => {
     return (
@@ -9,13 +9,14 @@ const ChatEngine = props => {
             style={{
                 zIndex: props.visible ? '100%' : '0%',
                 height: props.visible ? '100%' : '0%',
-                // opacity: props.visible ? '100' : '0',
-                ...styles.chatEngineWindow,
+                width: '100%',
+                backgroundColor: 'white',
+                // ...styles.chatEngineWindow,
             }}
         >
             {
                 props.visible && 
-                <chatEngineWrapper>
+                <ChatEngineWrapper>
                     <Socket 
                         projectID={REACT_APP_CE_PROJECT_ID}
                         userName={props.user.email}
@@ -24,7 +25,7 @@ const ChatEngine = props => {
 
                     <ChatFeed activeChat={props.chat.id} />
 
-                </chatEngineWrapper>
+                </ChatEngineWrapper>
             }
 
         </div>
