@@ -213,6 +213,12 @@ footer{
   position: sticky;
   top: 0;
   z-index: 999;
+  display: flex;
+  justify-content: space-between;
+}
+.nav-right{
+  display: inline-block;
+  
 }
 .center-horizontal{
   display: flex;
@@ -225,6 +231,9 @@ footer{
   justify-content: left;
   font-size: 1.75cap;
   column-gap: 20px;
+}
+.sign-in:hover{
+  background-color: transparent;
 }
 .logo{
   width: 50px;
@@ -463,5 +472,3 @@ footer{
   background-color: #7cc5d9;
   font-weight: 600;
 }
-
-

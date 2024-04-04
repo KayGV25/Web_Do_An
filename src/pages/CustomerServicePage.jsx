@@ -10,7 +10,7 @@ function CustomerServicePage() {
   return (
     <div className="App">
       <NavBar />
-      <SignInOut />
+      {/* <SignInOut /> */}
       {!user ? <Welcome /> : <ChatBox />}
     </div>
   );
