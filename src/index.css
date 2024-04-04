@@ -235,6 +235,10 @@ footer{
 .sign-in:hover{
   background-color: transparent;
 }
+.sign-out:hover{
+  background-color: var(--color1);
+  border: transparent;
+}
 .logo{
   width: 50px;
   display: flex;
