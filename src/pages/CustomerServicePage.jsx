@@ -1,6 +1,5 @@
 import { auth } from "../firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
-import "";
 import NavBar from "../assets/components/NavBar";
 import ChatBox from "../assets/components/ChatBox";
 import Welcome from "../assets/components/Welcome";
