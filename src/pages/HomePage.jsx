@@ -17,7 +17,6 @@ function HomePage(){
             <About />
             <Offer />
             <PricingPage />
-            <CustomerServicePage />
             <div className="float">
                 <ScrollToTop className='back-to-top' smooth />
             </div>
