@@ -1,7 +1,6 @@
 import { Accordion, Placeholder } from "react-bootstrap";
-// import SupportEngine from '../SupportEngine';
 import NavBar from "../assets/components/NavBar";
-
+import SupportEngine from '../SupportEngine';
 function SupportPage() {
   return (
     <>
@@ -33,9 +32,9 @@ function SupportPage() {
             </Accordion.Body>
           </Accordion.Item>
         </Accordion>
-        {/* <div>
+        <div>
           <SupportEngine />
-        </div> */}
+        </div>
         
     </>
   );
