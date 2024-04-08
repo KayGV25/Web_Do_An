@@ -58,6 +58,10 @@ button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
+button > a{
+  text-decoration: none;
+  color: white;
+}
 
 @media (prefers-color-scheme: light) {
   :root {
@@ -475,4 +479,43 @@ footer{
   border: 1px solid #7cc5d9;
   background-color: #7cc5d9;
   font-weight: 600;
+}
+
+.order-form-comtainer{
+  display: flex;
+  flex-direction: column;
+}
+.order-form{
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  padding: 60px 60px;
+  border-radius: 10px;
+  background-color: var(--color3);
+  transition: all 0.3s ease;
+}
+.order-form:hover{
+  box-shadow: var(--color2) 0 0px 30px 10px;
+}
+.order-form > input{
+  height: 6vh;
+  max-height: 100px;
+  border-radius: 10px;
+  padding-left: 20px;
+}
+
+.order-form > label{
+  font-size: 1.5rem;
+  color: var(--color1);
+  font-weight: bold;
+  margin-top: 20px;
+}
+.order-form > input[type="submit"]{
+  margin-top: 30px;
+  height: 6.5vh;
+  max-height: 100px;
+  border-radius: 10px;
+  background-color: var(--color1);
+  color: white;
+  font-size: 1.3rem;
 }

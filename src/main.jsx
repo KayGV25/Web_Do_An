@@ -13,6 +13,7 @@ import './index.css'
 import HomePage from './pages/HomePage';
 import ErrPage from './pages/ErrPage';
 import SupportPage from './pages/SupportPage';
+import Order from './pages/Order';
 
 // Add routing to different pages
 const router = createBrowserRouter([
@@ -24,6 +25,10 @@ const router = createBrowserRouter([
   {
     path: "Support",
     element: <SupportPage />
+  },
+  {
+    path: "Order",
+    element: <Order />
   },
 ]);
 

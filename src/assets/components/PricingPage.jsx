@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 function PricingPage(){
     return (
         <>
@@ -15,7 +17,7 @@ function PricingPage(){
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis, autem ullam! Odio mollitia eius suscipit expedita incidunt, vero labore doloribus magni, quas eum aliquid! Explicabo cumque adipisci a ipsa libero.</p>
                         </div>
                         <div>
-                            <button>Buy Now</button>
+                            <button><Link to="/Order">Buy Now</Link></button>
                         </div>
                     </div>
                 </div>
