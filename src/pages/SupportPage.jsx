@@ -5,7 +5,7 @@ function SupportPage() {
   return (
     <>
       <NavBar />
-        <h1 className="offer">This is Support</h1>
+        <h1 className="offer">Support</h1>
         <Accordion defaultActiveKey="0" flush className="list-container">
           <Accordion.Item eventKey="0">
             <Accordion.Header>Accordion Item #1</Accordion.Header>

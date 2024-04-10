@@ -9,12 +9,15 @@ function NavBar(){
                         <div className='circle lr'></div>
                         <div className='circle rl'></div>
                     </Link>
-                    <NavLink to="/" className={({ isActive }) => {
-                        return isActive ? "active nav" : "nav"
-                    }}>Home</NavLink>
-                    <NavLink to="/Support" className={({ isActive }) => {
-                        return isActive ? "active nav" : "nav"
-                    }}>Support</NavLink>
+                    <div className="nav-link">
+                        <NavLink to="/" className={({ isActive }) => {
+                            return isActive ? "active nav" : "nav"
+                        }}>Home</NavLink>
+                        <NavLink to="/Support" className={({ isActive }) => {
+                            return isActive ? "active nav" : "nav"
+                        }}>Support</NavLink>
+                    </div>
+                    <div></div>
                 </div>
             </nav>
         </>
