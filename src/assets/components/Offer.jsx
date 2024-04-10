@@ -33,6 +33,7 @@ function Offer(){
                     </Card.Body>
                 </Card>
                 </div>
+                <div id="offer"></div>
             </div>
         </>
     )

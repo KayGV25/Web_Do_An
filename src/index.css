@@ -144,6 +144,11 @@ button > a{
   display: flex;
   align-items: center;
 }
+@media (width < 900px){
+  .land-img{
+    display: none;
+  }
+}
 .land-text{
   border-left: 3px white solid;
   padding-left: 20px;
@@ -205,9 +210,45 @@ button > a{
 /* Footer */
 footer{
   background-color: var(--color1);
-  height: 30vh;
+  min-height: 50px;
+  padding: 10px 50px;
 }
-
+.footer{
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+}
+.footer-content{
+  display: flex;
+  flex-direction: column;
+}
+.footer-content > a{
+  text-decoration: none;
+  color: white;
+}
+.footer-content > p{
+  color: white;
+  position: relative;
+  margin-block: 3px;
+  padding-bottom: 5px;
+  margin-bottom: 5px;
+}
+.footer-content > span{
+  color: white;
+}
+.footer-content > span > *{
+  text-decoration: none;
+  color: white;
+}
+.footer-content > p::before{
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 3px;
+  background-color: white;
+}
 /* Nav */
 .nav-bar{
   background-color: var(--color1);
@@ -323,6 +364,7 @@ footer{
 
 .list-container{
   padding: 0 20%;
+  min-height: 80vh;
 }
 .list-container > *{
   border-radius: 20px;
