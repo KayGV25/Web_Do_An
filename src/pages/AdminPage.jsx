@@ -1,9 +1,13 @@
 import React from "react";
-import FecthData from "../FetchData";
+import FetchnUpdateData from "../FetchnUpdateData";
+// import Instock from "../Instock";
 
 function AdminPage(){
     return (
-        <FecthData />
+        <div>
+           <FetchnUpdateData />
+        </div>
+
     )
 }
 export default AdminPage;
