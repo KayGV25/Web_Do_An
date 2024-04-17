@@ -16,7 +16,7 @@ const Avatar = props => {
                 }}
                 >May muon j
             </div>
-            <Link   to="https://m.me/262206576982628"
+            <Link to="https://m.me/262206576982628"
                     target="_blank"
                     rel="noopener noreferrer">
                 <div 
