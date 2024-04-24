@@ -6,7 +6,7 @@ function Order(){
             <NavBar />
             <h1 className="offer">Placing Order</h1>
             <div className="order-form-container center-horizontal">
-                <form action="http://localhost:3000/new-customer" method="POST" className="order-form">
+                <form action="https://composed-sacred-lab.ngrok-free.app/new-customer" method="POST" className="order-form">
                     <label htmlFor="name">Name</label>
                     <input type="text" name="name" placeholder="Name..." autoFocus/>
                     <label htmlFor="email">Email</label>
