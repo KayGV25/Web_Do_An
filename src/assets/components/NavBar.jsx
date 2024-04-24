@@ -16,9 +16,6 @@ function NavBar(){
                         <NavLink to="/Support" className={({ isActive }) => {
                             return isActive ? "active nav" : "nav"
                         }}>Support</NavLink>
-                        <NavLink to="/AdminPage" className={({ isActive }) => {
-                            return isActive ? "active nav" : "nav"
-                        }}>Admin</NavLink>
                     </div>
                     <div></div>
                 </div>
