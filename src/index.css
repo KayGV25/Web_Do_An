@@ -575,6 +575,7 @@ footer{
   padding: 10px;
   background-color: #2A9D8F;
   border: 1px solid #FF0000;
+  color: white;
 }
 
 .delivering {
@@ -583,4 +584,5 @@ footer{
   padding: 10px;
   background-color: #2A9D8F;
   border: 1px solid #ffff00;
+  color: white;
 }

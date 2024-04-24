@@ -44,6 +44,11 @@ function FetchnUpdateData() {
         .then(console.log("success"))
     }
 
+    function FormatDate(rawDate){
+        var d = new Date(rawDate);
+        return d.toLocaleString('vi-VN');
+    }
+
     return (
         <div>
             <div>
@@ -54,12 +59,12 @@ function FetchnUpdateData() {
                     <ul style={{ color: 'var(--color2)' }}>
                             <div className="instock">
                                 <li>{user._id}</li>
-                                <li>{user.name}</li>
-                                <li>{user.address}</li>
-                                <li>{user.email}</li>
-                                <li>{user.phone}</li>
-                                <li>{user.productQuantity}</li>
-                                <li>{user.ordertime}</li>
+                                <li>Name: {user.name}</li>
+                                <li>Address: {user.address}</li>
+                                <li>Email: {user.email}</li>
+                                <li>Tel: {user.phone}</li>
+                                <li>Quantity: {user.productQuantity}</li>
+                                <li>Order time: {FormatDate(user.ordertime)}</li>
                                 <li>{user.status}</li>
                             </div>
                             <div>
@@ -79,12 +84,12 @@ function FetchnUpdateData() {
                     <ul style={{ color: 'var(--color2)' }}>
                             <div className="delivering">
                                 <li>{user._id}</li>
-                                <li>{user.name}</li>
-                                <li>{user.address}</li>
-                                <li>{user.email}</li>
-                                <li>{user.phone}</li>
-                                <li>{user.productQuantity}</li>
-                                <li>{user.ordertime}</li>
+                                <li>Name: {user.name}</li>
+                                <li>Address: {user.address}</li>
+                                <li>Email: {user.email}</li>
+                                <li>Tel: {user.phone}</li>
+                                <li>Quantity: {user.productQuantity}</li>
+                                <li>Order time: {FormatDate(user.ordertime)}</li>
                                 <li>{user.status}</li>
                             </div>
                             <div>
