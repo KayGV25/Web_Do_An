@@ -567,3 +567,20 @@ footer{
   color: white;
   font-size: 1.3rem;
 }
+
+/* order management */
+.instock {
+  max-height: 500px;
+  overflow-y: auto;
+  padding: 10px;
+  background-color: #2A9D8F;
+  border: 1px solid #FF0000;
+}
+
+.delivering {
+  max-height: 500px;
+  overflow-y: auto;
+  padding: 10px;
+  background-color: #2A9D8F;
+  border: 1px solid #ffff00;
+}

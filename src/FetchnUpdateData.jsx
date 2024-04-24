@@ -52,7 +52,7 @@ function FetchnUpdateData() {
                 if(user.status == 0){
                     return (
                     <ul style={{ color: 'var(--color2)' }}>
-                            <div>
+                            <div className="instock">
                                 <li>{user._id}</li>
                                 <li>{user.name}</li>
                                 <li>{user.address}</li>
@@ -77,7 +77,7 @@ function FetchnUpdateData() {
                 if(user.status == 1){
                     return (
                     <ul style={{ color: 'var(--color2)' }}>
-                            <div>
+                            <div className="delivering">
                                 <li>{user._id}</li>
                                 <li>{user.name}</li>
                                 <li>{user.address}</li>
@@ -98,5 +98,6 @@ function FetchnUpdateData() {
         </div>
     )
 }
+
 
 export default FetchnUpdateData
