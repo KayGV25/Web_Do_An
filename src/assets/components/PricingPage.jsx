@@ -1,11 +1,27 @@
 import { Link } from "react-router-dom";
+import { Carousel } from "react-bootstrap";
 
 function PricingPage(){
+    const images = [
+        "https://lh3.google.com/u/0/d/13YuVnhycEWqj0Pz66VavnP9IIMbqiP1k=w1860-h885-iv1",
+        "https://lh3.google.com/u/0/d/1B-031yxPVaYReG4PrVCz2h4ilooqEIlU=w1860-h885-iv1",
+        "https://lh3.google.com/u/0/d/1FF2R68Hyf7Et-c8enx3eOy6YiLLmwhhF=w1860-h885-iv1"
+    ]
     return (
         <>
             <div className="root">
                 <div className="holder" id="product">
-                    <div className="img"></div>
+                <Carousel className="img">
+                    <Carousel.Item>
+                        <img src="https://lh3.google.com/u/0/d/13YuVnhycEWqj0Pz66VavnP9IIMbqiP1k=w1860-h885-iv1" style={{width: "100%"}}/>
+                    </Carousel.Item>
+                    <Carousel.Item>
+                        <img src="https://lh3.google.com/u/0/d/1B-031yxPVaYReG4PrVCz2h4ilooqEIlU=w1860-h885-iv1" style={{width: "100%"}}/>
+                    </Carousel.Item>
+                    <Carousel.Item>
+                        <img src="https://lh3.google.com/u/0/d/1FF2R68Hyf7Et-c8enx3eOy6YiLLmwhhF=w1860-h885-iv1" style={{width: "100%"}}/>
+                    </Carousel.Item>
+                </Carousel>
                     <div className='des'>
                         <h1 className="name">
                             Cooling compartment
