@@ -44,6 +44,11 @@ function FetchnUpdateData() {
         .then(console.log("success"))
     }
 
+    function FormatDate(rawDate){
+        var d = new Date(rawDate);
+        return d.toLocaleString('vi-VN');
+    }
+
     return (
         <div className="custom-background">
             <div>
@@ -51,16 +56,26 @@ function FetchnUpdateData() {
             {data.map((user, index) => {
                 if(user.status == 0){
                     return (
+<<<<<<< HEAD
                     <ul style={{ color: '#F0F0F0' }}>
                         <div className="container">
                             <div className="column instock">
                                 <li className="hidden">{user._id}</li>
+=======
+                    <ul style={{ color: 'var(--color2)' }}>
+                            <div className="instock">
+                                <li>{user._id}</li>
+>>>>>>> 88525d2318bb01b9a2e40c8ea0d9ff3287430b60
                                 <li>Name: {user.name}</li>
                                 <li>Address: {user.address}</li>
                                 <li>Email: {user.email}</li>
                                 <li>Tel: {user.phone}</li>
                                 <li>Quantity: {user.productQuantity}</li>
+<<<<<<< HEAD
                                 <li>Order time: {user.ordertime}</li>
+=======
+                                <li>Order time: {FormatDate(user.ordertime)}</li>
+>>>>>>> 88525d2318bb01b9a2e40c8ea0d9ff3287430b60
                                 <li>{user.status}</li>
                             </div>
                             <div>
@@ -78,16 +93,26 @@ function FetchnUpdateData() {
             {data.map((user, index) => {
                 if(user.status == 1){
                     return (
+<<<<<<< HEAD
                     <ul style={{ color: '#F0F0F0' }}>
                         <div className="container">
                             <div className="column delivering">
                                 <li className="hidden">{user._id}</li>
+=======
+                    <ul style={{ color: 'var(--color2)' }}>
+                            <div className="delivering">
+                                <li>{user._id}</li>
+>>>>>>> 88525d2318bb01b9a2e40c8ea0d9ff3287430b60
                                 <li>Name: {user.name}</li>
                                 <li>Address: {user.address}</li>
                                 <li>Email: {user.email}</li>
                                 <li>Tel: {user.phone}</li>
                                 <li>Quantity: {user.productQuantity}</li>
+<<<<<<< HEAD
                                 <li>Oder time: {user.ordertime}</li>
+=======
+                                <li>Order time: {FormatDate(user.ordertime)}</li>
+>>>>>>> 88525d2318bb01b9a2e40c8ea0d9ff3287430b60
                                 <li>{user.status}</li>
                             </div>
                             <div>

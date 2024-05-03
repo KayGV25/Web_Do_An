@@ -97,7 +97,6 @@ button > a{
   min-width: 300px;
   display: grid;
   place-items: center;
-  background-image: url("./assets/product-images/istockphoto-520619396-612x612.jpg") ;
   background-position: center;
   background-clip: content-box;
   background-size: cover;
@@ -135,9 +134,9 @@ button > a{
 }
 .land-img{
   width: 100%;
-  height: 500px;
-  background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("./assets/product-images/istockphoto-520619396-612x612.jpg") ;
-  background-position: center;
+  height: 600px;
+  background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("https://lh3.google.com/u/0/d/1FF2R68Hyf7Et-c8enx3eOy6YiLLmwhhF=w1860-h885-iv1") ;
+  background-position: top;
   background-clip: content-box;
   background-size: cover;
   background-attachment: fixed;
@@ -577,6 +576,7 @@ footer{
   max-height: 500px;
   overflow-y: auto;
   padding: 10px;
+<<<<<<< HEAD
   background-color: #4f979fd7;
   width: 500px;
   border-radius: 10px;
@@ -596,4 +596,22 @@ footer{
 
 .hidden {
   display: none;
+=======
+  background-color: #2A9D8F;
+  border: 1px solid #FF0000;
+  color: white;
+}
+
+.delivering {
+  max-height: 500px;
+  overflow-y: auto;
+  padding: 10px;
+  background-color: #2A9D8F;
+  border: 1px solid #ffff00;
+  color: white;
+}
+
+.carousel-inner{
+  height: 100%;
+>>>>>>> 88525d2318bb01b9a2e40c8ea0d9ff3287430b60
 }
