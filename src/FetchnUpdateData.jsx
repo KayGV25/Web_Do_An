@@ -76,8 +76,8 @@ function FetchnUpdateData() {
                             </div>
                             <div className="btn-layout">
                                 <button onClick={() => handleDelivering(index,user._id)}>Delivering</button>
-                                <button onClick={() => handleDelivered(index,user._id)} className="btn btn-success">Delivered</button>
-                                <button onClick={() => handleDelete(index,user._id)} className="btn btn-danger">Delete</button>
+                                <button onClick={() => handleDelivered(index,user._id)} className="btn btn-success" style={{fontWeight: 'bold'}}>Delivered</button>
+                                <button onClick={() => handleDelete(index,user._id)} className="btn btn-danger" style={{fontWeight: 'bold'}}>Delete</button>
                             </div>
                         </div>
                         </ul>    )}
@@ -103,8 +103,8 @@ function FetchnUpdateData() {
                             </div>
                             <div className="btn-layout">
                                 <button onClick={() => handleDelivering(index,user._id)}>Delivering</button>
-                                <button onClick={() => handleDelivered(index,user._id)} className="btn btn-success">Delivered</button>
-                                <button onClick={() => handleDelete(index,user._id)} className="btn btn-danger">Delete</button>
+                                <button onClick={() => handleDelivered(index,user._id)} className="btn btn-success" style={{fontWeight: 'bold'}}>Delivered</button>
+                                <button onClick={() => handleDelete(index,user._id)} className="btn btn-danger" style={{fontWeight: 'bold'}}>Delete</button>
                             </div>
                         </div>
                         </ul>    )}
