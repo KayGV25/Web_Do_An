@@ -5,7 +5,7 @@ import axios from "axios";
 function FetchnUpdateData() {
     const [data, setData] = useState([])
     useEffect(() => {
-        axios.get('https://composed-sacred-lab.ngrok-free.app/db')
+        axios.get('https://be-inovation-project.onrender.com/db')
         // .then(res => console.log(res.data))
         .then(res => setData(res.data))
         .catch(err => console.log(err));
@@ -16,7 +16,7 @@ function FetchnUpdateData() {
         const newData = [...data];
         setData(newData);
         console.log(data);
-        axios.post("https://composed-sacred-lab.ngrok-free.app/updateStatus/OnTheWay", {
+        axios.post("https://be-inovation-project.onrender.com/updateStatus/OnTheWay", {
             id: id,
         })
         .then(console.log("success"))
@@ -27,7 +27,7 @@ function FetchnUpdateData() {
         const newData = [...data];
         setData(newData);
         console.log(data);
-        axios.post("https://composed-sacred-lab.ngrok-free.app/updateStatus/Delivered", {
+        axios.post("https://be-inovation-project.onrender.com/updateStatus/Delivered", {
             id: id,
         })
         .then(console.log("success"))
@@ -38,7 +38,7 @@ function FetchnUpdateData() {
         const newData = [...data];
         setData(newData);
         console.log(data);
-        axios.post("https://composed-sacred-lab.ngrok-free.app/delete", {
+        axios.post("https://be-inovation-project.onrender.com/delete", {
             id: id,
         })
         .then(console.log("success"))
