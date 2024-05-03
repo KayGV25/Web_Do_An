@@ -45,21 +45,22 @@ function FetchnUpdateData() {
     }
 
     return (
-        <div>
+        <div className="custom-background">
             <div>
-            <h1 style={{ color: 'var(--color2)' }}>In stock</h1>
+            <h1 style={{ color: '#F0F0F0' , fontFamily: 'Display, sans-serif' }}>In stock</h1>
             {data.map((user, index) => {
                 if(user.status == 0){
                     return (
-                    <ul style={{ color: 'var(--color2)' }}>
-                            <div className="instock">
-                                <li>{user._id}</li>
-                                <li>{user.name}</li>
-                                <li>{user.address}</li>
-                                <li>{user.email}</li>
-                                <li>{user.phone}</li>
-                                <li>{user.productQuantity}</li>
-                                <li>{user.ordertime}</li>
+                    <ul style={{ color: '#F0F0F0' }}>
+                        <div className="container">
+                            <div className="column instock">
+                                <li className="hidden">{user._id}</li>
+                                <li>Name: {user.name}</li>
+                                <li>Address: {user.address}</li>
+                                <li>Email: {user.email}</li>
+                                <li>Tel: {user.phone}</li>
+                                <li>Quantity: {user.productQuantity}</li>
+                                <li>Order time: {user.ordertime}</li>
                                 <li>{user.status}</li>
                             </div>
                             <div>
@@ -67,24 +68,26 @@ function FetchnUpdateData() {
                                 <button onClick={() => handleDelivered(index,user._id)}>Delivered</button>
                                 <button onClick={() => handleDelete(index,user._id)}>Delete</button>
                             </div>
+                        </div>
                         </ul>    )}
         })}
             </div> 
 
             <div>
-            <h1 style={{ color: 'var(--color2)' }}>Delivering</h1>
+            <h1 style={{ color: '#F0F0F0' , fontFamily: 'Display, sans-serif' }}>Delivering</h1>
             {data.map((user, index) => {
                 if(user.status == 1){
                     return (
-                    <ul style={{ color: 'var(--color2)' }}>
-                            <div className="delivering">
-                                <li>{user._id}</li>
-                                <li>{user.name}</li>
-                                <li>{user.address}</li>
-                                <li>{user.email}</li>
-                                <li>{user.phone}</li>
-                                <li>{user.productQuantity}</li>
-                                <li>{user.ordertime}</li>
+                    <ul style={{ color: '#F0F0F0' }}>
+                        <div className="container">
+                            <div className="column delivering">
+                                <li className="hidden">{user._id}</li>
+                                <li>Name: {user.name}</li>
+                                <li>Address: {user.address}</li>
+                                <li>Email: {user.email}</li>
+                                <li>Tel: {user.phone}</li>
+                                <li>Quantity: {user.productQuantity}</li>
+                                <li>Oder time: {user.ordertime}</li>
                                 <li>{user.status}</li>
                             </div>
                             <div>
@@ -92,6 +95,7 @@ function FetchnUpdateData() {
                                 <button onClick={() => handleDelivered(index,user._id)}>Delivered</button>
                                 <button onClick={() => handleDelete(index,user._id)}>Delete</button>
                             </div>
+                        </div>
                         </ul>    )}
         })}
             </div> 
