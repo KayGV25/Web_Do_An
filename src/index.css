@@ -568,8 +568,10 @@ footer{
 }
 
 /* order management */
-.container {
+.order-container {
   display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .column {
@@ -579,6 +581,7 @@ footer{
   background-color: #295f64d7;
   width: 500px;
   border-radius: 10px;
+  margin-top: 10px;
 }
 
 .instock {
@@ -591,6 +594,7 @@ footer{
 
 .custom-background {
   background-color: #233142;
+  padding-bottom: 30px;
 }
 
 .hidden {
@@ -599,4 +603,29 @@ footer{
 
 .carousel-inner{
   height: 100%;
+}
+.btn-layout{
+  margin-top: 5px;
+  display: flex;
+  justify-content: space-between;
+}
+.side-menu-container{
+  background: rgb(17,23,31);
+  background: linear-gradient(90deg, rgba(17,23,31,1) 0%, rgba(255,255,255,0) 100%);
+  padding-inline: 20px;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  z-index: 9999;
+  height: 100vh;
+  vertical-align: middle;
+  a{
+    text-decoration: none;
+    color: white;
+    font-size: 1.5em;
+  }
+}
+.side-menu{
+  display: flex;
+  flex-direction: column;
 }
