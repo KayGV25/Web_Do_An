@@ -79,13 +79,21 @@ function RenderActionDropdown(props){
                 <button id={user._id} className={StateClass(user.status)} type="button" data-bs-toggle="dropdown" aria-expanded="false" disabled={(!isClickable) ? true : false}>
                     {LOOKUPSTATUS[user.status]}
                 </button>
-                <ul class="dropdown-menu">
-                    {(user.status != 1) ? <li><a class="dropdown-item" href="#" onClick={() => {handleDelivering(index, user._id)}}>Delivering</a></li> : <></>}
-                    {(user.status != 2 && user.status != 0) ? <li><a class="dropdown-item" href="#" onClick={() => {handleDelivered(index, user._id)}}>Delivered</a></li> : <></>}
-                    <li><a class="dropdown-item" href="#" onClick={()=>{handleCancle(index, user._id)}}>Cancle</a></li>
-                </ul>
+                {() => {
+                    if(user.status != 3){
+                        return(
+                            <>
+                                <ul class="dropdown-menu">
+                                    {(user.status != 1) ? <li><a class="dropdown-item" href="#" onClick={() => {handleDelivering(index, user._id)}}>Delivering</a></li> : <></>}
+                                    {(user.status != 2 && user.status != 0) ? <li><a class="dropdown-item" href="#" onClick={() => {handleDelivered(index, user._id)}}>Delivered</a></li> : <></>}
+                                    <li><a class="dropdown-item" href="#" onClick={()=>{handleCancle(index, user._id)}}>Cancle</a></li>
+                                </ul>
+                            </>
+                        )
+                    }
+                    }}
             </div>
-            <button className="update-btn" onClick={()=>{Update(user._id)}}>Update</button>
+            <button className="update-btn" onClick={()=>{Update(user._id)}} disabled={(user.status != 3) ? false : true}>Update</button>
         </>
     )
 }
