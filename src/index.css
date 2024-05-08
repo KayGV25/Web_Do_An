@@ -609,7 +609,7 @@ footer{
   display: flex;
   justify-content: space-between;
 }
-.side-menu-container{
+/* .side-menu-container{
   background: rgb(17,23,31);
   background: linear-gradient(90deg, rgba(17,23,31,1) 0%, rgba(255,255,255,0) 100%);
   padding-inline: 20px;
@@ -628,4 +628,4 @@ footer{
 .side-menu{
   display: flex;
   flex-direction: column;
-}
+} */
