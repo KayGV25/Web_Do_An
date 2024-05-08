@@ -21,23 +21,17 @@ function AdminPage(){
         setUserData: setData
     }
 
-    // var search = document.querySelector("form");
-    // search.addEventListener('submit', (event) => {
-    //     event.preventDefault();
-    //     const rawdata = new FormData(event.target); 
-    //     const data = [...rawdata.entries()];
-    //     const text = data[0][1];
-    //     SearchByName(text.toLowerCase());
-    // })
     const handleSubmit = (event) => {
         event.preventDefault();
         SearchByName(name.toLowerCase());
       }
 
     function SearchByName(name){
-        // axios.post("https://be-inovation-project.onrender.com/OnTheWay")
-        // .then(res => setData(res.data))
-        // .catch(err => console.log(err));
+        axios.post("https://be-inovation-project.onrender.com/getByPhone", {
+            name:name,
+        })
+        .then(res => setData(res.data))
+        .catch(err => console.log(err));
         console.log("Receive Name :", name);
     }
 
@@ -45,8 +39,8 @@ function AdminPage(){
         <div className="dark-bg">
             <AdminContext.Provider value={valueToParse}>
                 <form onSubmit={handleSubmit} className="search-container">
-                    <label htmlFor="Search">Search by name: </label>
-                    <input onChange={(e) => setName(e.target.value)} value={name} type="search" name="Seacrh" autoFocus/>
+                    <label htmlFor="Search">Search by phone number: </label>
+                    <input onChange={(e) => setName(e.target.value)} value={name} type="search" name="Seacrh" autoFocus placeholder="Enter * to search for all..."/>
                 </form>
                 {/* Grid sheet */}
                 <div className="DataSheetContainer">
