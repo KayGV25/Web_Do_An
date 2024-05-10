@@ -14,7 +14,7 @@ const Avatar = props => {
                     opacity: hovered ? '1' : '0',
                     ...styles.avatarHello
                 }}
-                >May muon j
+                >Chat with Admin
             </div>
             <Link to="https://m.me/262206576982628"
                     target="_blank"
