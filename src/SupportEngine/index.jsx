@@ -11,7 +11,7 @@ const SupportEngine = () => {
             <Avatar 
             
                 style={{ 
-                    position: 'fixed', bottom: '100px', right: '35px'                    
+                    position: 'fixed', bottom: '100px', right: '35px'         
                 }}
             />
            
