@@ -12,6 +12,10 @@ function RenderData(){
         var d = new Date(rawDate);
         return d.toLocaleString('vi-VN');
     }
+    function FormatId(rawDate){
+        var d = new Date(rawDate);
+        return d.valueOf();
+    }
 
     // Mapping prioritize instock and delivering
     return (
@@ -20,7 +24,7 @@ function RenderData(){
                     if(user.status == 0){
                         return(
                             <div className="DataSheet-row">
-                                <p>{user._id}</p>
+                                <p>{user.Cid}</p>
                                 <p>{FormatDate(user.ordertime)}</p>
                                 <RenderName data={user}/>
                                 <p>{user.productQuantity}</p>
@@ -33,7 +37,7 @@ function RenderData(){
                     if(user.status == 1){
                         return(
                             <div className="DataSheet-row">
-                                <p>{user._id}</p>
+                                <p>{user.id}</p>
                                 <p>{FormatDate(user.ordertime)}</p>
                                 <RenderName data={user}/>
                                 <p>{user.productQuantity}</p>
@@ -46,7 +50,7 @@ function RenderData(){
                     if(user.status == 2){
                         return(
                             <div className="DataSheet-row">
-                                <p>{user._id}</p>
+                                <p>{user.id}</p>
                                 <p>{FormatDate(user.ordertime)}</p>
                                 <RenderName data={user}/>
                                 <p>{user.productQuantity}</p>
@@ -59,7 +63,7 @@ function RenderData(){
                     if(user.status == 3){
                         return(
                             <div className="DataSheet-row">
-                                <p>{user._id}</p>
+                                <p>{user.id}</p>
                                 <p>{FormatDate(user.ordertime)}</p>
                                 <RenderName data={user}/>
                                 <p>{user.productQuantity}</p>
