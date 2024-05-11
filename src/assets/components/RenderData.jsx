@@ -23,6 +23,7 @@ function RenderData(){
                                 <p>{user._id}</p>
                                 <p>{FormatDate(user.ordertime)}</p>
                                 <RenderName data={user}/>
+                                <p>{user.productQuantity}</p>
                                 <RenderActionDropdown data={user} index={index}/>
                             </div>
                         )
@@ -35,6 +36,7 @@ function RenderData(){
                                 <p>{user._id}</p>
                                 <p>{FormatDate(user.ordertime)}</p>
                                 <RenderName data={user}/>
+                                <p>{user.productQuantity}</p>
                                 <RenderActionDropdown data={user} index={index}/>
                             </div>
                         )
@@ -47,6 +49,7 @@ function RenderData(){
                                 <p>{user._id}</p>
                                 <p>{FormatDate(user.ordertime)}</p>
                                 <RenderName data={user}/>
+                                <p>{user.productQuantity}</p>
                                 <RenderActionDropdown data={user} index={index}/>
                             </div>
                         )
@@ -59,6 +62,7 @@ function RenderData(){
                                 <p>{user._id}</p>
                                 <p>{FormatDate(user.ordertime)}</p>
                                 <RenderName data={user}/>
+                                <p>{user.productQuantity}</p>
                                 <RenderActionDropdown data={user} index={index}/>
                             </div>
                         )

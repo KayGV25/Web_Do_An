@@ -47,6 +47,7 @@ function AdminPage(){
                     <div className="DataSheet-row Head">
                         <p>OrderID</p>
                         <p>Order Time</p>
+                        <p>Name</p>
                         <p>Quantity</p>
                         <p>Status</p>
                         <p>Update</p>

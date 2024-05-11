@@ -644,7 +644,7 @@ footer{
 .DataSheet-row{
   color: white;
   display: grid;
-  grid-template-columns: 20% 20% 20% 20% 20%;
+  grid-template-columns: 20% 20% 20% 10% 10% 20%;
   margin-block: 10px;
   p{
     margin: auto 0;

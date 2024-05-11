@@ -1,5 +1,7 @@
 import { useState, useContext } from "react";
 import { AdminContext } from "../../pages/AdminPage";
+import Dropdown from 'react-bootstrap/Dropdown';
+import DropdownButton from 'react-bootstrap/DropdownButton';
 import axios from "axios";
 
 const LOOKUPSTATUS = {
@@ -55,18 +57,18 @@ function RenderActionDropdown(props){
     }
 
     function StateClass(status){
-        var res = "btn dropdown-toggle ";
+        var res;
         if(status == 0){
-            res += "btn-danger";
+            res = "Danger";
         }
         else if(status == 1){
-            res += "btn-warning";
+            res = "Warning";
         }
         else if(status == 2){
-            res += "btn-success";
+            res = "Success";
         }
         else{
-            res += "btn-secondary";
+            res = "Secondary";
         }
         return res;
     }
@@ -75,25 +77,12 @@ function RenderActionDropdown(props){
     const index = props.index;
     return(
         <>
-            <div class="dropdown">
-                <button id={user._id} className={StateClass(user.status)} type="button" data-bs-toggle="dropdown" aria-expanded="false" disabled={(!isClickable) ? true : false}>
-                    {LOOKUPSTATUS[user.status]}
-                </button>
-                {() => {
-                    if(user.status != 3){
-                        return(
-                            <>
-                                <ul class="dropdown-menu">
-                                    {(user.status != 1) ? <li><a class="dropdown-item" href="#" onClick={() => {handleDelivering(index, user._id)}}>Delivering</a></li> : <></>}
-                                    {(user.status != 2 && user.status != 0) ? <li><a class="dropdown-item" href="#" onClick={() => {handleDelivered(index, user._id)}}>Delivered</a></li> : <></>}
-                                    <li><a class="dropdown-item" href="#" onClick={()=>{handleCancle(index, user._id)}}>Cancle</a></li>
-                                </ul>
-                            </>
-                        )
-                    }
-                    }}
-            </div>
-            <button className="update-btn" onClick={()=>{Update(user._id)}} disabled={(user.status != 3) ? false : true}>Update</button>
+            <DropdownButton id={`dropdown-variants-${StateClass(user.status)}`} variant={StateClass(user.status).toLowerCase()} className={StateClass(user.status)} title={LOOKUPSTATUS[user.status]} disabled={(!isClickable) ? true : false}>
+                {(user.status != 1) ? <Dropdown.Item href="#" onClick={() => {handleDelivering(index, user._id)}}>Delivering</Dropdown.Item> : <></>}
+                {(user.status != 2 && user.status != 0) ? <Dropdown.Item href="#" onClick={() => {handleDelivered(index, user._id)}}>Delivered</Dropdown.Item> : <></>}
+                <Dropdown.Item href="#" onClick={()=>{handleCancle(index, user._id)}}>Cancle</Dropdown.Item>
+            </DropdownButton>
+            <button className="update-btn" onClick={()=>{Update()}} disabled={(user.status != 3) ? false : true}>Update</button>
         </>
     )
 }
