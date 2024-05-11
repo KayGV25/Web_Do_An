@@ -56,6 +56,7 @@ function AdminPage(){
                     <RenderData data={data}/>
                 </div>
             </AdminContext.Provider>
+            <a href="https://docs.google.com/spreadsheets/d/1NdrrHMRSGG9LpzjxVA-as_gnkZgzQIY-TqpPivB-EPE/edit?usp=sharing" target="_blank">Link to sheet</a>
         </div>
     )
 }
