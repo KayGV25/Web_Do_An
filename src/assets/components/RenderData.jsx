@@ -37,7 +37,7 @@ function RenderData(){
                     if(user.status == 1){
                         return(
                             <div className="DataSheet-row">
-                                <p>{user.id}</p>
+                                <p>{user.Cid}</p>
                                 <p>{FormatDate(user.ordertime)}</p>
                                 <RenderName data={user}/>
                                 <p>{user.productQuantity}</p>
@@ -50,7 +50,7 @@ function RenderData(){
                     if(user.status == 2){
                         return(
                             <div className="DataSheet-row">
-                                <p>{user.id}</p>
+                                <p>{user.Cid}</p>
                                 <p>{FormatDate(user.ordertime)}</p>
                                 <RenderName data={user}/>
                                 <p>{user.productQuantity}</p>
@@ -63,7 +63,7 @@ function RenderData(){
                     if(user.status == 3){
                         return(
                             <div className="DataSheet-row">
-                                <p>{user.id}</p>
+                                <p>{user.Cid}</p>
                                 <p>{FormatDate(user.ordertime)}</p>
                                 <RenderName data={user}/>
                                 <p>{user.productQuantity}</p>
