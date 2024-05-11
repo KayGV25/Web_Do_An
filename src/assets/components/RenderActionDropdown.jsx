@@ -9,7 +9,7 @@ const LOOKUPSTATUS = {
     1:"Delivering",
     2:"Delivered",
     3:"Cancled",
-    "In stock": 0,
+    "In Stock": 0,
     "Delivering": 1,
     "Delivered": 2,
     "Cancled": 3
