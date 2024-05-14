@@ -8,11 +8,11 @@ const LOOKUPSTATUS = {
     0:"In Stock",
     1:"Delivering",
     2:"Delivered",
-    3:"Cancled",
+    3:"Cancelled",
     "In Stock": 0,
     "Delivering": 1,
     "Delivered": 2,
-    "Cancled": 3
+    "Cancelled": 3
 }
 
 function RenderActionDropdown(props){
